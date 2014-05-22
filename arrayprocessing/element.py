@@ -5,7 +5,6 @@ A list of antenna element types.
 """
 import numpy as np
 
-
 class BaseElement(object):
 
     """Base element.
@@ -31,5 +30,8 @@ class MonopoleElement(BaseElement):
     """
 
     def _get_propagation(self, az, el=np.pi / 2):
-        return np.array([np.cos(az) * np.sin(el),
-                         np.sin(az) * np.sin(el), np.cos(el)])[:, None]
+        propagation = np.zeros((3, 1), dtype='float32')
+        propagation[0, :] = np.cos(az) * np.sin(el)
+        propagation[1, :] = np.sin(az) * np.sin(el)
+        propagation[2, :] = np.cos(el)
+        return propagation

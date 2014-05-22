@@ -2,7 +2,7 @@ arrayprocessing
 ===============
 
 Array processing algorithms and simulation for RF array design, 
-direction of arrival (DOA, also known as direction finding, DF) estimation, and geolocation.
+direction of arrival (DOA) / direction finding (DF), and geolocation.
 
 Current Element Types
 ---------------------
@@ -16,10 +16,6 @@ Current Geometry Types
 
 * Random 
 
-* Circular
-
-* Planar
-
 Current Array Types
 -------------------
 
@@ -27,22 +23,35 @@ Current Array Types
 
 * Classical Beamformer
 
+To Do
+=====
+
+* Circular geometry
+
+* Planar geometry
+
+* Y geometry
+
 * MVDR Beamformer
 
 * Null Steered
 
 * Combination Beamformer (combinations of above types i.e. MVDR + null steered)
 
-To Do
-=====
-* Setup python package
+* Implement DF algorithms (MVDR, MPDR, MUSIC, ESPIRIT, others?)
+
+* Tools for DF error
+
+* Array type for arbitrary geometry passed as [N, 3] numpy array
+
+* Doublet elements
+
+* Give elements a plot_response() function
 
 * Read arrays and geometries from CSV
 
 * Add data simulation and dataset support
 
-* Implement DF algorithms 
+* Add tests
 
-* Tools for DF error
-
-* Integrate with empy and work towards EM/RF simualtion
+* Integrate with empy and work towards arbitrary EM/RF simulation
