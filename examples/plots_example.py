@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from arrayprocessing.array import BeamformedMonopoleArray
 
 #Create beamformed array
-arr = BeamformedMonopoleArray(4, np.pi / 4, 'linear')
+arr = BeamformedMonopoleArray(13, np.pi / 4, 'y')
 
 #Plot element positions
 arr.plot_geometry()

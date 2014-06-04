@@ -61,7 +61,7 @@ class BaseArrayMixin(GeometryMixin):
         plt.plot(all_az, all_gain, color='steelblue')
         plt.xlim(min_az, max_az)
 
-    def plot_gain2D(self, n_pts=360, log_scale=True):
+    def plot_gain2D(self, n_pts=720, log_scale=True):
         """Plot the 2D gain pattern of an array."""
         x_plot_min = self.x_min - 1000
         x_plot_max = self.x_max + 1000
